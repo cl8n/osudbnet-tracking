@@ -1,0 +1,9 @@
+{
+	"name": "osudbnet-tracking",
+	"private": true,
+	"type": "module",
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"superagent": "^10.1.0"
+	}
+}
