@@ -49,8 +49,6 @@ export default class Osu {
 
 	async getClientCredentialsToken() {
 		if (Date.now() >= this.#tokenExpiresAt - refreshTokenThreshold) {
-			systemLog('Getting new token', SyslogLevel.debug);
-
 			const tokenInfo = serializeTokenResponse(
 				await superagent.post(`${config.osuBaseUrl}/oauth/token`).type('form').send({
 					client_id: config.osuClientId,
